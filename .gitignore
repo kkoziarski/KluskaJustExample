@@ -361,3 +361,8 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# SQLite
+/KluskaJustExample.ApiService/*.db-wal
+/KluskaJustExample.ApiService/*.db-shm
+/KluskaJustExample.ApiService/*.db
