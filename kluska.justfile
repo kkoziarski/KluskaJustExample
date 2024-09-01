@@ -28,6 +28,15 @@ set ignore-comments
 @run:
   dotnet run --project .\KluskaJustExample.AppHost\KluskaJustExample.AppHost.csproj
 
+ef-add-migration migrationName:
+  dotnet ef migrations add {{migrationName}} --project .\KluskaJustExample.ApiService\KluskaJustExample.ApiService.csproj --context KluskaDbContext
+
+ef-update-database:
+  dotnet ef database update --project .\KluskaJustExample.ApiService\KluskaJustExample.ApiService.csproj --context KluskaDbContext
+
+ef-remove-last-migration:
+  dotnet ef migrations remove --project .\KluskaJustExample.ApiService\KluskaJustExample.ApiService.csproj --context KluskaDbContext
+
 # run helper console app with arguments: `kluska run-helper-tool abc=1 cde`
 @helper-tool *args:
   #!pwsh
