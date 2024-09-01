@@ -11,3 +11,29 @@ set ignore-comments
 
 @hello:
   Write-Host "Hello, I'm Kluska CLI from {{justfile()}}"
+
+# Show arch and os name
+@os-info:
+  Write-Host "Arch: {{arch()}}"
+  Write-Host "OS: {{os()}}"
+
+# location of the project
+@dir:
+  pwd
+
+# build solution
+@build:
+  dotnet build ./KluskaJustExample.sln
+
+@run:
+  dotnet run --project .\KluskaJustExample.AppHost\KluskaJustExample.AppHost.csproj
+
+# run helper console app with arguments: `kluska run-helper-tool abc=1 cde`
+@helper-tool *args:
+  #!pwsh
+  cd "utilities/HelperTool"
+  dotnet run --project HelperTool.csproj -- {{args}}
+
+# git example scoped to this repo only
+git *args:
+  @git {{args}}
