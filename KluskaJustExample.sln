@@ -15,7 +15,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "utilities", "utilities", "{54C547B8-377E-4639-AC74-FDE68C350B1F}"
 	ProjectSection(SolutionItems) = preProject
 		kluska.justfile = kluska.justfile
-		Just-setup.md = Just-setup.md
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HelperTool", "HelperTool", "{88FE4A80-0A6F-4D6B-912F-7AD04009E92A}"
